@@ -84,16 +84,7 @@ let submit = (choice) => {
 
 //sobald RESTART geklickt wird, soll die Funktion ausgeführt werden, die die Results zurückstellen
 let restart = () => {
-    // let resultHuman = false;
-    // let resultComputer = false;
     resultComputerInput.innerHTML = 0;
     resultHumanInput.innerHTML = 0;
     h3.innerHTML = "";
-    // if (rounds5.checked){
-    //     console.log("ja");
-            //window.location.reload();
-        // console.log(rounds5.checked);
-        // resultHuman = 0;
-        // resultComputer = 0;
-    //}
 }
