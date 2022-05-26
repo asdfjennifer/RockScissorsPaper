@@ -5,7 +5,7 @@ Hier stelle ich euch das Spiel "Stein, Schere, Papier" vor, das wir im Rahmen de
 Übungen zu:
 - Arrays
 - Switch
-- 
+- If else
 
 Verwendete Technologien:
 
