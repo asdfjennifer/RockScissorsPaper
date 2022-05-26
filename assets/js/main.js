@@ -31,11 +31,13 @@ let submit = (choice) => {
                 resultHuman++;
                 resultHumanInput.innerHTML = resultHuman;
                 h3.innerHTML = "Du hast gewonnen!";
+                gameRounds += 1;
             break;
             case 2:
                 resultComputer++;
                 resultComputerInput.innerHTML = resultComputer;
                 h3.innerHTML = "Der Computer hat gewonnen!";
+                gameRounds += 1;
             break;
         }
     } else if (choice == scissor){
@@ -48,14 +50,17 @@ let submit = (choice) => {
                 resultComputer++;
                 resultComputerInput.innerHTML = resultComputer;
                 h3.innerHTML = "Stein schlägt Schere. Der Computer hat gewonnen!";
+                gameRounds += 1;
             break;
             case 1:
                 h3.innerHTML = "Gleichstand!";
+                gameRounds += 1;
             break;
             case 2:
                 resultHuman++;
                 resultHumanInput.innerHTML = resultHuman;
                 h3.innerHTML = "Du hast gewonnen!";
+                gameRounds += 1;
             break;
         }
     } else if (choice == paper){
@@ -68,14 +73,17 @@ let submit = (choice) => {
                 resultHuman++;
                 resultHumanInput.innerHTML = resultHuman;
                 h3.innerHTML = "Papier schlägt Stein. Du hast gewonnen!";
+                gameRounds += 1;
             break;
             case 1:
                 resultComputer++;
                 resultComputerInput.innerHTML = resultComputer;
                 h3.innerHTML = "Der Computer hat gewonnen!";
+                gameRounds += 1;
             break;
             case 2:
                 h3.innerHTML = "Gleichstand!";
+                gameRounds += 1;
             break;
         }
     }
@@ -84,7 +92,30 @@ let submit = (choice) => {
 
 //sobald RESTART geklickt wird, soll die Funktion ausgeführt werden, die die Results zurückstellen
 let restart = () => {
-    resultComputerInput.innerHTML = 0;
-    resultHumanInput.innerHTML = 0;
+    resultComputer = 0;
+    resultComputerInput.innerHTML = resultComputer;
+    resultHuman = 0;
+    resultHumanInput.innerHTML = resultHuman;
+    gameRounds = 0;
     h3.innerHTML = "";
+}
+
+let gameRound = () => {
+    if (rounds5.checked) {
+        if (gameRounds > 5) {
+            restart();
+        }
+    } if (rounds10.checked) {
+        if (gameRounds > 10) {
+            restart();
+        }
+    } if (rounds15.checked) {
+        if (gameRounds > 15) {
+            restart();
+    } if (rounds20.checked) {
+        if (gameRounds > 20) {
+            restart();
+            }
+        }
+    }
 }
