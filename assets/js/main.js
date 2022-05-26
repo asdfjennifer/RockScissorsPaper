@@ -10,7 +10,6 @@ let resultComputer = 0;
 let resultHumanInput = document.getElementById('resultHuman_input');
 let resultComputerInput = document.getElementById('resultComputer_input');
 let gameRounds = 0;
-//let restart = document.getElementById('restart_input');
 
 //wenn man sich eine Runde aussucht, kommt diese Anzahl in der Konsole raus
 let submit = (choice) => {
@@ -18,10 +17,6 @@ let submit = (choice) => {
     let randomComputerChoice = Math.floor(Math.random() * 3);
     //Stein = 0, Schere = 1, Papier 2
     if (choice == stone){
-        console.log(rounds5.checked);
-        console.log(rounds10.checked);
-        console.log(rounds15.checked);
-        console.log(rounds20.checked);
         switch(randomComputerChoice) {
             case 0:
                 h3.innerHTML = "Niemand gewinnt, es herrscht Gleichstand!";
@@ -41,10 +36,6 @@ let submit = (choice) => {
             break;
         }
     } else if (choice == scissor){
-        console.log(rounds5.checked);
-        console.log(rounds10.checked);
-        console.log(rounds15.checked);
-        console.log(rounds20.checked);
         switch(randomComputerChoice) {
             case 0:
                 resultComputer++;
@@ -64,10 +55,6 @@ let submit = (choice) => {
             break;
         }
     } else if (choice == paper){
-        console.log(rounds5.checked);
-        console.log(rounds10.checked);
-        console.log(rounds15.checked);
-        console.log(rounds20.checked);
         switch(randomComputerChoice) {
             case 0:
                 resultHuman++;
@@ -89,7 +76,6 @@ let submit = (choice) => {
     }
 }
 
-
 //sobald RESTART geklickt wird, soll die Funktion ausgeführt werden, die die Results zurückstellen
 let restart = () => {
     resultComputer = 0;
@@ -102,18 +88,18 @@ let restart = () => {
 
 let gameRound = () => {
     if (rounds5.checked) {
-        if (gameRounds > 5) {
+        if (gameRounds >= 5) {
             restart();
         }
     } if (rounds10.checked) {
-        if (gameRounds > 10) {
+        if (gameRounds >= 10) {
             restart();
         }
     } if (rounds15.checked) {
-        if (gameRounds > 15) {
+        if (gameRounds >= 15) {
             restart();
     } if (rounds20.checked) {
-        if (gameRounds > 20) {
+        if (gameRounds >= 20) {
             restart();
             }
         }
