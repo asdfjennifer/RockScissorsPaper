@@ -9,7 +9,8 @@ let resultHuman = 0;
 let resultComputer = 0;
 let resultHumanInput = document.getElementById('resultHuman_input');
 let resultComputerInput = document.getElementById('resultComputer_input');
-let restart;
+let gameRounds = 0;
+//let restart = document.getElementById('restart_input');
 
 //wenn man sich eine Runde aussucht, kommt diese Anzahl in der Konsole raus
 let submit = (choice) => {
@@ -24,6 +25,7 @@ let submit = (choice) => {
         switch(randomComputerChoice) {
             case 0:
                 h3.innerHTML = "Niemand gewinnt, es herrscht Gleichstand!";
+                gameRounds += 1;
             break;
             case 1:
                 resultHuman++;
@@ -81,11 +83,17 @@ let submit = (choice) => {
 
 
 //sobald RESTART geklickt wird, soll die Funktion ausgeführt werden, die die Results zurückstellen
-// let restart = () => {
-//     if (rounds5.checked){
-//         console.log("ja");
-//         // console.log(rounds5.checked);
-//         // resultHuman = 0;
-//         // resultComputer = 0;
-//     }
-// }
+let restart = () => {
+    // let resultHuman = false;
+    // let resultComputer = false;
+    resultComputerInput.innerHTML = 0;
+    resultHumanInput.innerHTML = 0;
+    h3.innerHTML = "";
+    // if (rounds5.checked){
+    //     console.log("ja");
+            //window.location.reload();
+        // console.log(rounds5.checked);
+        // resultHuman = 0;
+        // resultComputer = 0;
+    //}
+}
