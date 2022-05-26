@@ -1,4 +1,4 @@
-# RockScissorsPaper
+# Rock, Scissors, Paper ✂️🪨📄
 
 Hier stelle ich euch das Spiel "Stein, Schere, Papier" vor, das wir im Rahmen des SuperCode Bootcamps erstellt haben.
 
