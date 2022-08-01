@@ -11,8 +11,9 @@ Verwendete Technologien:
 
 - HTML
 - CSS
-- JAVASCRIPT
+- Javascript
 
 Hier geht's zum Ergebnis: https://asdfjennifer.github.io/RockScissorsPaper/
 
-Viel Spaß!
+Note: Runden nach Vorgabe beenden
+![Bildschirmfoto 2022-08-01 um 23 54 10](https://user-images.githubusercontent.com/98667941/182252670-a9e63ae0-beb5-4ce3-8a3e-e7be5d1014c2.png)
